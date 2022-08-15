@@ -12,7 +12,9 @@ const TopBar = (props) => {
       </div>
       <div className="Buttons">
         <div className="Paragraph" style={{ float: "right" }}>
-          <p>Login</p>
+          <Link to="/">
+            <p>Login</p>
+          </Link>
         </div>
         <div
           className="Paragraph"

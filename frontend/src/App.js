@@ -1,12 +1,27 @@
 import "./App.css";
 import TopBar from "./components/TopBar";
 import Homepage from "./pages/Homepage";
+import {
+  HashRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
+import Staff from "./pages/Staff";
+import Resources from "./pages/Resources";
 
 function App() {
   return (
     <>
-      <TopBar />
-      <Homepage />
+      <Router>
+        <TopBar />
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route exact path="/staff" component={Staff} />
+          <Route exact path="/resources" component={Resources} />
+          <Redirect to="/" />
+        </Switch>
+      </Router>
     </>
   );
 }
