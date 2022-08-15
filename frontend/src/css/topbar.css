@@ -1,0 +1,38 @@
+.Top-Bar {
+  align-self: center;
+  width: 80%;
+  height: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #15510f;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.Brand {
+  text-align: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  margin-left: 1%;
+  float: left;
+}
+
+.Paragraph {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-block-start: 1.5%;
+}
+
+.Buttons {
+  text-align: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  margin-right: 1%;
+  float: right;
+}
