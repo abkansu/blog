@@ -1,9 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
 import TopBar from "./components/TopBar";
+import Homepage from "./pages/Homepage";
 
 function App() {
-  return <TopBar />;
+  return (
+    <>
+      <TopBar />
+      <Homepage />
+    </>
+  );
 }
 
 export default App;
