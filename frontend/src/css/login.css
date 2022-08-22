@@ -1,0 +1,7 @@
+.Login-Container {
+  width: 50%;
+  height: 100%;
+  float: right;
+  border-left: 2px solid gray;
+  margin-top: 5%;
+}

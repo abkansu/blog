@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Staff from "./pages/Staff";
 import Resources from "./pages/Resources";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/staff" component={Staff} />
           <Route exact path="/resources" component={Resources} />
+          <Route exact path="/login" component={LoginPage} />
           <Redirect to="/" />
         </Switch>
       </Router>

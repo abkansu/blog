@@ -14,7 +14,10 @@ const TopBar = (props) => {
       </div>
       <div className="Buttons">
         <div className="Paragraph" style={{ float: "right" }}>
-          <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+          <NavLink
+            to="/login"
+            style={{ color: "white", textDecoration: "none" }}
+          >
             <p>Login</p>
           </NavLink>
         </div>
