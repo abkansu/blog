@@ -10,6 +10,7 @@ import {
 import Staff from "./pages/Staff";
 import Resources from "./pages/Resources";
 import LoginPage from "./pages/LoginPage";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/staff" component={Staff} />
           <Route exact path="/resources" component={Resources} />
           <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/about" component={About} />
           <Redirect to="/" />
         </Switch>
       </Router>

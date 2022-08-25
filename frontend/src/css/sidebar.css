@@ -1,0 +1,20 @@
+.Element {
+  margin-top: 2%;
+  background-color: #15510f;
+  border-radius: 2px;
+  height: 30px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.Link {
+  text-decoration: none;
+  color: white;
+  font-family: Josefin Sans, sans-serif;
+}
+
+.Bar {
+  width: 10%;
+  float: left;
+}
