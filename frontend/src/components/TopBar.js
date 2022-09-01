@@ -21,28 +21,6 @@ const TopBar = (props) => {
             <p>Login</p>
           </NavLink>
         </div>
-        {/* <div
-          className="Paragraph"
-          style={{ float: "right", marginRight: "10%" }}
-        >
-          <NavLink
-            to="/resources"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            <p>Resources</p>
-          </NavLink>
-        </div>
-        <div
-          className="Paragraph"
-          style={{ float: "right", marginRight: "10%" }}
-        >
-          <NavLink
-            to="/staff"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            <p>Staff</p>
-          </NavLink>
-        </div> */}
       </div>
     </div>
   );
