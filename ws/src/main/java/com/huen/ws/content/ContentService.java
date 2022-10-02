@@ -7,7 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ContentService {
@@ -38,5 +40,30 @@ public class ContentService {
         Member member = memberRepository.findMemberById(id);
         System.out.println(member.getContents().size());
         return contentRepository.findContentsByMember(member);
+    }
+
+    @Transactional
+    public HttpStatus deleteContent(Long id) {
+        try{
+            Integer b = contentRepository.deleteContentById(id);
+            if(b != 1){
+                throw new RuntimeException();
+            }
+            return HttpStatus.OK;
+        }catch (Exception e){
+            return HttpStatus.BAD_REQUEST;
+        }
+    }
+
+    public Content getContent(Long id) {
+        try{
+            Optional<Content> content = contentRepository.findContentById(id);
+            if (!content.isPresent()){
+                throw new RuntimeException();
+            }
+            return content.get();
+        }catch (Exception e){
+            return null;
+        }
     }
 }

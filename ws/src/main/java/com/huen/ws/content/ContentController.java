@@ -18,6 +18,16 @@ public class ContentController {
         return contentService.postContent(file);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public HttpStatus deleteContent(@PathVariable("id") Long id){
+        return contentService.deleteContent(id);
+    }
+
+    @GetMapping("/get/{id}")
+    public Content getContent(@PathVariable("id") Long id){
+        return contentService.getContent(id);
+    }
+
     @GetMapping("/getAll")
     public List<Content> getAllContent(){
         return contentService.getAllContent();

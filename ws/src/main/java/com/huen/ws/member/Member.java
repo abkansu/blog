@@ -41,7 +41,7 @@ public class Member {
 
     private String password;
 
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "member", orphanRemoval = true, cascade = CascadeType.PERSIST)
     @JsonIgnore
     private Set<Content> contents;
 
