@@ -34,8 +34,9 @@ public class ContentService {
         return contentRepository.findAll();
     }
 
-    public List<Content> getAllContentByMember(String username) {
-        Member member = memberRepository.getMemberByUsername(username);
-        return contentRepository.getAllByMember(member);
+    public List<Content> getAllContentByMember(Long id) {
+        Member member = memberRepository.findMemberById(id);
+        System.out.println(member.getContents().size());
+        return contentRepository.findContentsByMember(member);
     }
 }

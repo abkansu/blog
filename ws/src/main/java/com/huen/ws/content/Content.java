@@ -13,7 +13,15 @@ import javax.persistence.*;
 @Data
 public class Content {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(
+            name = "content_sequence",
+            sequenceName = "content_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "content_sequence"
+    )
     private Long id;
 
     @ManyToOne
@@ -24,12 +32,12 @@ public class Content {
     private Long size;
 
     @Lob
-    private byte[] content;
+    private byte[] info;
 
-    public Content(String filename, String filetype, byte[] content, Long size, Member member) {
+    public Content(String filename, String filetype, byte[] info, Long size, Member member) {
         this.filename = filename;
         this.type = filetype;
-        this.content = content;
+        this.info = info;
         this.size = size;
         this.member = member;
     }

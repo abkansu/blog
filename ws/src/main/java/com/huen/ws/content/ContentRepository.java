@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ContentRepository extends JpaRepository<Content, Long> {
-    List<Content> getAllByMember(Member member);
+    List<Content> findContentsByMember(Member member);
 }

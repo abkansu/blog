@@ -23,8 +23,8 @@ public class ContentController {
         return contentService.getAllContent();
     }
 
-    @GetMapping("/getAll/{username}")
-    public List<Content> getAllContentByMember(@PathVariable("username") String username){
-        return contentService.getAllContentByMember(username);
+    @GetMapping("/getAll/{id}")
+    public List<Content> getAllContentByMember(@PathVariable("id") Long id){
+        return contentService.getAllContentByMember(id);
     }
 }

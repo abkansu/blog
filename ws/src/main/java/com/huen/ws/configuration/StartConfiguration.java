@@ -8,6 +8,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Configuration
 public class StartConfiguration {
 
@@ -17,11 +20,10 @@ public class StartConfiguration {
             for (int i = 0; i < 10; i++) {
                 Member member = new Member("user" + i, "pass" + i);
                 memberRepository.save(member);
-                for (int j = 0; j < 3; j++){
+                for (int j = 0; j < 3; j++) {
                     Content content = new Content("name" + j, "none", null, 0L, member);
                     contentRepository.save(content);
                 }
-
             }
         };
     }
