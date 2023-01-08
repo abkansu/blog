@@ -4,6 +4,16 @@ import image from "../images/resim.png";
 
 const LoginPage = (props) => {
   const onChange = () => {};
+  const onHoverLogin = (event) => {
+    event.target.style.backgroundColor = "green";
+    event.target.style.color = "#F6EDD9";
+    event.target.style.scale = 1.1;
+  }
+  const onLeaveLogin = (event) => {
+    event.target.style.backgroundColor = "#F6EDD9";
+    event.target.style.color = "green";
+    event.target.style.scale = 1.0;
+  }
   return (
     <div>
       <div
@@ -97,6 +107,8 @@ const LoginPage = (props) => {
                   width: "100%",
                 }}
                 onClick={(event) => event.preventDefault()}
+                onMouseOver={onHoverLogin}
+                onMouseLeave={onLeaveLogin}
               >
                 Login
               </button>
