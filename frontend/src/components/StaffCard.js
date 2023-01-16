@@ -21,7 +21,7 @@ const StaffCard = (props) => {
             maxHeight: "85%",
             maxWidth: "15%",
             borderRadius: "50px",
-            float: "left",
+            float: "right",
             margin: "1%",
             alignSelf: "center",
           }}

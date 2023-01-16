@@ -11,21 +11,26 @@ import Staff from "./pages/Staff";
 import Resources from "./pages/Resources";
 import LoginPage from "./pages/LoginPage";
 import About from "./pages/About";
+import { UserContext } from "./async/CreateContext";
+import { useState } from "react";
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <>
-      <Router>
-        <TopBar />
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/staff" component={Staff} />
-          <Route exact path="/resources" component={Resources} />
-          <Route exact path="/login" component={LoginPage} />
-          <Route exact path="/about" component={About} />
-          <Redirect to="/" />
-        </Switch>
-      </Router>
+      <UserContext.Provider value={{user, setUser}}>
+        <Router>
+          <TopBar />
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route exact path="/staff" component={Staff} />
+            <Route exact path="/resources" component={Resources} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/about" component={About} />
+            <Redirect to="/" />
+          </Switch>
+        </Router>
+      </UserContext.Provider>
     </>
   );
 }

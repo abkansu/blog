@@ -1,8 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import SideBar from "../components/SideBar";
+import { useContext } from "react";
+import { UserContext } from "../async/CreateContext";
+import AdminSideBar from "../components/AdminSideBar";
+
 
 const Homepage = (props) => {
+  const { user, setUser } = useContext(UserContext);
+
   return (
     <div
       style={{
@@ -12,7 +18,7 @@ const Homepage = (props) => {
         height: "100%",
       }}
     >
-      <SideBar />
+      {user?.isAdmin ? <AdminSideBar /> : <SideBar />}
     </div>
   );
 };

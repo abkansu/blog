@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../css/login.css";
 import image from "../images/resim.png";
+import { UserContext } from "../async/CreateContext";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const LoginPage = (props) => {
+  const { user, setUser } = useContext(UserContext);
+  const history = useHistory();
   const onChange = () => {};
   const onHoverLogin = (event) => {
     event.target.style.backgroundColor = "green";
@@ -106,7 +110,15 @@ const LoginPage = (props) => {
                   fontSize: "1em",
                   width: "100%",
                 }}
-                onClick={(event) => event.preventDefault()}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setUser({
+                    id: 3,
+                    isAdmin: true,
+                    username: "kagan ozdemir" 
+                  });
+                  history.push("/")
+                }}
                 onMouseOver={onHoverLogin}
                 onMouseLeave={onLeaveLogin}
               >
