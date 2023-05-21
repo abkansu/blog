@@ -1,2 +1,3 @@
 # blog
-blog for kgnn17
+
+unfinished blog for kgnn17

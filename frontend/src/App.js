@@ -13,6 +13,7 @@ import LoginPage from "./pages/LoginPage";
 import About from "./pages/About";
 import { UserContext } from "./async/CreateContext";
 import { useState } from "react";
+import ShowPdf from "./pages/ShowPdf";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -27,6 +28,7 @@ function App() {
             <Route exact path="/resources" component={Resources} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/showpdf" component={ShowPdf} />
             <Redirect to="/" />
           </Switch>
         </Router>

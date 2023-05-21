@@ -114,7 +114,7 @@ const LoginPage = (props) => {
                   event.preventDefault();
                   setUser({
                     id: 3,
-                    isAdmin: true,
+                    isAdmin: false,
                     username: "kagan ozdemir" 
                   });
                   history.push("/")
